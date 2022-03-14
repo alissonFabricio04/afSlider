@@ -1,29 +1,10 @@
 <?php
 
-/**
- * Plugin Name: AF Slider
- * Plugin URI: https://adastra-creative.com
- * Description: A simple Image slider
- * Version: 1.0
- * Requires at least: 5.6
- * Author: Amar Filali
- * Author URI: https://amarfilali.com
- * License: GPL v2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: af-slider
- * Domain Path: /languages
- */
-
-/*AF Slider is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-any later version.
-AF Slider is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with AF Slider. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
+/*
+Plugin Name: AF Slider
+Version: 1.0.0
+Description: Slider Show
+Author: Alisson Fabricio Bonfim Da Silva
 */
 
 if (!defined('ABSPATH')) {
@@ -104,8 +85,8 @@ if (!class_exists('AF_Slider')) {
         public function add_menu()
         {
             add_menu_page(
-                esc_html__('AF Slider Options', 'af-slider'),
-                esc_html__('AF Slider', 'af-slider'),
+                'AF Slider Options',
+                'AF Slider',
                 'manage_options',
                 'af_slider_admin',
                 array($this, 'af_slider_settings_page'),
@@ -114,8 +95,8 @@ if (!class_exists('AF_Slider')) {
 
             add_submenu_page(
                 'af_slider_admin',
-                esc_html__('Manage slides', 'af-slider'),
-                esc_html__('Manage slides', 'af-slider'),
+                'Manage slides',
+                'Manage slides',
                 'manage_options',
                 'edit.php?post_type=af-slider',
                 null,
@@ -124,8 +105,8 @@ if (!class_exists('AF_Slider')) {
 
             add_submenu_page(
                 'af_slider_admin',
-                esc_html__('Add new slide', 'af-slider'),
-                esc_html__('Add new Slide', 'af-slider'),
+                'Add New Slide',
+                'Add New Slide',
                 'manage_options',
                 'post-new.php?post_type=af-slider',
                 null,

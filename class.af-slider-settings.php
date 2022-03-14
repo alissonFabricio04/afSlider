@@ -14,21 +14,21 @@ if( ! class_exists('AF_Slider_exists') ){
 
             add_settings_section(
                 'af_slider_main_section',
-                esc_html__( 'How does it word?', 'af-slider' ),
+                'How does it word?', 'af-slider',
                 null,
                 'af_slider_page1'
             );
             
             add_settings_section(
                 'af_slider_second_section',
-                esc_html__( 'Other plugin options', 'af-slider' ),
+                'Other plugin options', 'af-slider',
                 null,
                 'af_slider_page2'
             );
 
             add_settings_field(
                 'af_slider_shortcode',
-                esc_html__( 'Shortcode', 'af-slider' ),
+                'Shortcode', 'af-slider',
                 array( $this, 'af_slider_shortcode_callback' ),
                 'af_slider_page1',
                 'af_slider_main_section'
@@ -36,7 +36,7 @@ if( ! class_exists('AF_Slider_exists') ){
 
             add_settings_field(
                 'af_slider_title',
-                esc_html__( 'Slider title', 'af-slider' ),
+                'Slider title',
                 array( $this, 'af_slider_title_callback' ),
                 'af_slider_page2',
                 'af_slider_second_section',
@@ -47,7 +47,7 @@ if( ! class_exists('AF_Slider_exists') ){
 
             add_settings_field(
                 'af_slider_bullets',
-                esc_html__( 'Display Bullets', 'af-slider' ),
+                'Display Bullets',
                 array( $this, 'af_slider_bullets_callback' ),
                 'af_slider_page2',
                 'af_slider_second_section',
@@ -58,7 +58,7 @@ if( ! class_exists('AF_Slider_exists') ){
 
             add_settings_field(
                 'af_slider_style',
-                esc_html__( 'Slider Style','af-slider' ),
+                'Slider Style',
                 array( $this, 'af_slider_style_callback'),
                 'af_slider_page2',
                 'af_slider_second_section',
@@ -75,7 +75,7 @@ if( ! class_exists('AF_Slider_exists') ){
 
         public function af_slider_shortcode_callback(){
             ?>
-                <span><?php esc_html_e('Use the shortcode [af_slider] to display the slider in any page/post/widget', 'af-slider'); ?></span>
+                <span>Use the shortcode [af_slider] to display the slider in any page/post/widget</span>
             <?php
         }
 
